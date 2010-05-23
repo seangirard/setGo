@@ -8,12 +8,12 @@
 
 #container { color: #036; border-top: .25em solid #ccc; }
 
-#colleft, #colright, #colmid { margin: 0; padding: .5em; min-height: 200px; }
-#colleft, #colright { border-bottom: 2px dotted #ccc; }
+#col-left, #col-right, #col-mid { margin: 0; padding: .5em; min-height: 250px; }
+#col-left, #col-right { border-bottom: 2px dotted #999; }
 
-#colmid { min-width: 300px; }
-#colleft { width: 100px; background-color: #ccc; border-right: 2px solid #999; }
-#colright { width: 200px; }
+#col-mid { min-width: 300px; }
+#col-left { width: 100px; border-right: 2px solid #999; background: #ccc url('../../lib/img/shim/1x1-black.png') repeat-y 99% 60%; }
+#col-right { width: 200px; }
 
 #app { padding: .5em 1em; }
 

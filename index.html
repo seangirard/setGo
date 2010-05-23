@@ -16,7 +16,7 @@
 <meta Http-Equiv="Expires" Content="0" />
 -->
 
-<title>jQuery::protoPlugin::setGo</title>
+<title>jQuery::protoPlug::setGo</title>
 
 <link href="./lib/css/sg.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -29,13 +29,13 @@ $(document).ready(function() {
     var $app = $('#app');
     var $opt = {
                 // Custom properties
-                msg: '...setGo!',
-                // Callbacks
+                msg: "function { <br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
+                // Reserve Callbacks
                 __success: function($this) {
-                    $this.html($this.$opts.msg);
-                    $('#describe').delay(1500).fadeIn('slow');
-                    $('#colright').delay(4500).fadeIn('slow');
-                    $('#tagline').delay(6000).fadeIn('slow');
+                    $this.delay(1000).append($this.$opts.msg).fadeIn();
+                    $('#describe').delay(2000).fadeIn();
+                    $('#col-right').delay(5000).fadeIn();
+                    $('#tagline').delay(7000).fadeIn('slow');
                     // Console
                     $this.setGo.traceOptions(); 
                 },
@@ -44,14 +44,14 @@ $(document).ready(function() {
                 }
         };
     // Run App
-    $app.setGo($opt);
+    $app.setGo($opt);    
 });
 </script>
 
 </head>
 <body>
 
-    <div id="wireframe" class="transBlack setGo { msg: 'setGo!' }">
+    <div id="wireframe" class="setGo { msg: 'setGo!' }">
         
         <div id="header">
             <div id="masthead">
@@ -64,13 +64,15 @@ $(document).ready(function() {
         
         <div id="container">
             
-            <div id="colleft" class="float-left">
-                
+            <div id="col-left" class="float-left">
+                <p>
+                $(document)
+                </p>
             </div>
             
-            <div id="colmid" class="float-left">
+            <div id="col-mid" class="float-left">
                 <div id="app" class="xxl">
-                    App
+                    Application
                 </div>
                 <div id="describe" class="hide">
                     <p>
@@ -84,12 +86,12 @@ $(document).ready(function() {
                 </div>
             </div>
             
-            <div id="colright" class="float-right hide">
-                <div id="tagline" class="hide bold">
+            <div id="col-right" class="float-right hide">
+                <div id="tagline" class="hide">
                     <blockquote>
-                    Is your 
+                    Is <em>your</em> 
                     <br />
-                    $(document).ready()?
+                    $(document)<strong>.ready()</strong>?
                     </blockquote>
                 </div>
             </div>
@@ -97,7 +99,7 @@ $(document).ready(function() {
             <div class="clear">&nbsp;</div>
         </div>
         
-        <div id="footer" class="clear">
+        <div id="footer">
             <span class="xxl">&raquo;</span>
             <a rel="external" href="http://github.com/seangirard/setGo">http://github.com/seangirard/setGo</a>
         </div>
