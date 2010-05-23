@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="Sean Girard" />
+
+<!--
+<meta Http-Equiv="Cache-Control" Content="no-cache" />
+<meta Http-Equiv="Pragma" Content="no-cache" />
+<meta Http-Equiv="Expires" Content="0" />
+-->
+
+<link href="./lib/css/sg.css" rel="stylesheet" type="text/css" media="all" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<!-- <script src="./lib/js/jquery.metadata.js" type="text/javascript"></script> -->
+<script src="./lib/js/jquery.setGo.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // Configure
+    var $app = $('#container');
+    var $opt = {
+                // Custom properties
+                msg: 'setGo!',
+                // Reserved (callbacks)
+                __success: function($this) {
+                    $this.html($this.$opts.msg); // Use standard jQuery
+                    $this.setGo.traceOptions(); // Or call public methods
+                },
+                __failure: function($this, $err) {
+                    $this.html('Well, this really <em>is</em> embarrassing...');
+                }
+        };
+    // Run App
+    $app.setGo($opt);
+});
+</script>
+
+</head>
+<body>
+
+    <div id="wireframe" class="transBlack setGo { msg: 'setGo!' }">
+        <div id="header">
+            @author: <strong>Sean Girard</strong>
+        </div>
+    
+        <div id="container">
+            App
+        </div>
+        
+        <div id="footer">
+            Is your $(document).ready()?
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
