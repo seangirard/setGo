@@ -34,8 +34,8 @@ $(document).ready(function() {
                 __success: function($this) {
                     $this.html($this.$opts.msg);
                     $('#describe').delay(1500).fadeIn('slow');
-                    $('#colright').delay(3000).fadeIn('slow');
-                    $('#tagline').delay(4500).fadeIn('slow');
+                    $('#colright').delay(4500).fadeIn('slow');
+                    $('#tagline').delay(6000).fadeIn('slow');
                     // Console
                     $this.setGo.traceOptions(); 
                 },
@@ -73,15 +73,24 @@ $(document).ready(function() {
                     App
                 </div>
                 <div id="describe" class="hide">
-                    An application anti-pattern.
+                    <p>
+                        A jQuery application anti-pattern.
+                    </p>
+                    <ul>
+                        <li>Now with HTML/CSS wireframe.</li>
+                        <li>Wrap your app in a snap.</li>
+                        <li>Write less, do more.</li>
+                    </ul>
                 </div>
             </div>
             
             <div id="colright" class="float-right hide">
                 <div id="tagline" class="hide bold">
+                    <blockquote>
                     Is your 
                     <br />
                     $(document).ready()?
+                    </blockquote>
                 </div>
             </div>
             
