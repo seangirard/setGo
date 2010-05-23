@@ -16,6 +16,8 @@
 <meta Http-Equiv="Expires" Content="0" />
 -->
 
+<title>jQuery::protoPlugin::setGo</title>
+
 <link href="./lib/css/sg.css" rel="stylesheet" type="text/css" media="all" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
@@ -24,14 +26,18 @@
 <script type="text/javascript">
 $(document).ready(function() {
     // Configure
-    var $app = $('#container');
+    var $app = $('#app');
     var $opt = {
                 // Custom properties
-                msg: 'setGo!',
-                // Reserved (callbacks)
+                msg: '...setGo!',
+                // Callbacks
                 __success: function($this) {
-                    $this.html($this.$opts.msg); // Use standard jQuery
-                    $this.setGo.traceOptions(); // Or call public methods
+                    $this.html($this.$opts.msg);
+                    $('#describe').delay(1500).fadeIn('slow');
+                    $('#colright').delay(3000).fadeIn('slow');
+                    $('#tagline').delay(4500).fadeIn('slow');
+                    // Console
+                    $this.setGo.traceOptions(); 
                 },
                 __failure: function($this, $err) {
                     $this.html('Well, this really <em>is</em> embarrassing...');
@@ -46,20 +52,48 @@ $(document).ready(function() {
 <body>
 
     <div id="wireframe" class="transBlack setGo { msg: 'setGo!' }">
+        
         <div id="header">
-            @author: <strong>Sean Girard</strong>
-        </div>
-    
-        <div id="container">
-            App
+            <div id="masthead">
+                @author: <strong>Sean Girard</strong>
+                <div class="float-right">
+                    (<a rel="external" href="http://twitter.com/seanmgirard">@seanmgirard</a>)
+                </div>
+            </div>
         </div>
         
-        <div id="footer">
-            Is your $(document).ready()?
+        <div id="container">
+            
+            <div id="colleft" class="float-left">
+                
+            </div>
+            
+            <div id="colmid" class="float-left">
+                <div id="app" class="xxl">
+                    App
+                </div>
+                <div id="describe" class="hide">
+                    An application anti-pattern.
+                </div>
+            </div>
+            
+            <div id="colright" class="float-right hide">
+                <div id="tagline" class="hide bold">
+                    Is your 
+                    <br />
+                    $(document).ready()?
+                </div>
+            </div>
+            
+            <div class="clear">&nbsp;</div>
         </div>
-
+        
+        <div id="footer" class="clear">
+            <span class="xxl">&raquo;</span>
+            <a rel="external" href="http://github.com/seangirard/setGo">http://github.com/seangirard/setGo</a>
+        </div>
+        
     </div>
-    
     
 </body>
 </html>

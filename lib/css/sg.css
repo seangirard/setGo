@@ -2,9 +2,25 @@
 // Application
 */
 
-#wireframe { width: 80%; margin: 2em auto; padding: 1em; border:1px solid #ccc;}
+a { color: #636; }
+a:hover {  }
 
-#container { margin: 1em 0; }
+#wireframe { width: 80%; margin: 2em auto; padding: 1em; }
+
+#header { color:#666; border-bottom: .25em solid #ccc; }
+
+#container { color: #036; }
+
+#colleft, #colright, #colmid { margin: 0; padding: .5em; min-height: 200px; }
+#colleft, #colright { border-bottom: .25em solid #ccc; }
+
+#colmid { min-width: 300px; }
+#colleft { width: 100px; background-color: #ccc; border-right: 1px solid #999; }
+#colright { width: 200px; }
+
+#app { padding: .5em 1em; }
+
+#footer { color: #fc9; }
 
 /* 
 // Document Elements 
@@ -17,11 +33,30 @@ body { font: 100% Helvetica, sans-serif; }
 a { outline: none; }
 a img { border: none; }
 
-table {border-collapse:collapse;}
-td,th {vertical-align:top; margin:0; padding:0;}
+table { border-collapse: collapse; }
+td,th { vertical-align:top; margin:0; padding:0; }
+
+h1 { font-size: 2em; font-weight:normal; margin: 0 0 1em 0; }
+h2 { font-size: 1.1em; margin: 0 0 .25em 0; }
+h3 { font-size: 1em; margin: 0; }
+
+h4, h5, h6 { font-size: .9em; }
+
+blockquote { margin: 1em 0; padding: 1em; }
 
 ul,ol { list-style-position: inside; }
+li {  }
 
+dl {  }
+dt {  }
+dd {  }
+
+fieldset {  }
+legend {  }
+label {  }
+
+form {  }
+input, textarea {  }
 
 /* 
 // Layout Utilities
@@ -31,8 +66,9 @@ ul,ol { list-style-position: inside; }
 .float-right { float: right; }
 .right { text-align: right; }
 .clear { clear: both; }
-.bold { font-weight:bold; }
-.hide { display:none; }
+.bold { font-weight: bold; }
+.hide { display: none; }
+.xxl { font-size: 2em; font-weight: normal; }
 
 /* 
 // Print Settings
