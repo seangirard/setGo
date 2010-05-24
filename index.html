@@ -29,11 +29,11 @@ $(document).ready(function() {
     var $app = $('#app');
     var $opt = {
                 // Custom properties
-                msg: "function { <br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
+                msg: "{<br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
                 // Reserve Callbacks
                 __success: function($this) {
                     $this.delay(1000).append($this.$opts.msg).fadeIn();
-                    $('#describe').delay(2000).fadeIn();
+                    $('#describe').delay(2500).fadeIn();
                     $('#col-right').delay(5000).fadeIn();
                     $('#tagline').delay(7000).fadeIn('slow');
                     // Console
