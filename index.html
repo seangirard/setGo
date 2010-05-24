@@ -32,6 +32,14 @@ $(document).ready(function() {
                 msg: "{<br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
                 // Reserve Callbacks
                 __success: function($this) {
+                    $('#readme').click(function(e) {
+                        $.get('README', function(readme) {
+                            $('#describe').append(readme);
+                            $('#readme').hide();
+                        });
+                        e.preventDefault();
+                    });
+                
                     $this.delay(1000).append($this.$opts.msg).fadeIn();
                     $('#describe').delay(2500).fadeIn();
                     $('#col-right').delay(5000).fadeIn();
@@ -83,6 +91,9 @@ $(document).ready(function() {
                         <li>Wrap your app in a snap.</li>
                         <li>Write less, do more.</li>
                     </ul>
+                    <p>
+                        <a id="readme" href="#">more...</a>
+                    </p>
                 </div>
             </div>
             
