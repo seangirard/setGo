@@ -1,6 +1,6 @@
-<p>
-setGo provides a simple plugin pattern for your jQuery application.
-</p>
+<h3>
+A simple plugin pattern for your jQuery application.
+</h3>
 
 <p>
 ToDo: Finish README.

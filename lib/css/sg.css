@@ -6,16 +6,32 @@
 
 #header { color:#666; border-bottom: 2px solid #999; }
 
-#container { color: #036; border-top: .25em solid #ccc; }
+#masthead {  }
+#branding {  }
+#tagline {  }
+#contact {  }
 
-#col-left, #col-right, #col-mid { margin: 0; padding: .5em; min-height: 250px; }
-#col-left, #col-right { border-bottom: 2px dotted #999; }
-
-#col-mid { min-width: 300px; }
-#col-left { width: 100px; border-right: 2px solid #999; background: #ccc url('../../lib/img/shim/1x1-black.png') repeat-y 99% 50%; }
-#col-right { width: 200px; }
 
 #app { padding: .5em 1em; }
+
+#menu, #navigate {  }
+#menu ul, #navigate ul { margin:0; padding:0; }
+#menu ul li, #navigate ul li { text-align: center; margin:0; padding:0; display:block; list-style-type: none; }
+
+#menu ul {  }
+#navigate ul { float: left; }
+
+#menu ul li {  }
+#navigate ul li {  }
+
+#wrapper { color: #036; border-top: .25em solid #ccc; width:auto; }
+
+#col-left, #col-right, #col-mid { height:400px; margin: 0; padding: .5em; }
+#col-left, #col-right { border-bottom: 2px dotted #999; }
+
+#col-mid { width: 400px; }
+#col-left { width: 100px; border-right: 2px solid #999; background: #ccc url('../../lib/img/shim/1x1-black.png') repeat-y 99% 50%; }
+#col-right { width: 200px; }
 
 #footer { color: #fc9; }
 
@@ -31,7 +47,7 @@ h2 { font-size: 1.1em; margin: 0 0 .25em 0; }
 h3 { font-size: 1em; margin: 0; }
 
 h4, h5, h6 { font-size: .9em; }
-
+ 
 p { margin: 0 0 .5em 0; }
 
 ul,ol { list-style-position: inside; margin:.5em; }
@@ -69,8 +85,8 @@ td,th { vertical-align:top; margin:0; padding:0; }
 // Layout Utilities
 */
 
-.float-left { float: left; }
-.float-right { float: right; }
+.float-left { float: left; /*display:inline;*/ }
+.float-right { float: right; /*display:inline;*/ }
 
 .right { text-align: right; }
 .clear { clear: both; }

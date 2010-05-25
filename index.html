@@ -16,7 +16,7 @@
 <meta Http-Equiv="Expires" Content="0" />
 -->
 
-<title>jQuery::protoPlug::setGo</title>
+<title>jQuery::protoPlugin::setGo</title>
 
 <link href="./lib/css/sg.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -30,15 +30,15 @@ $(document).ready(function() {
     var $opt = {
                 // Custom properties
                 msg: "{<br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
-                // Reserve Callbacks
+                // Reserved Callbacks
                 __success: function($this) {
-                    $('#readme').click(function(e) {
+                    var more = function(e,d,h) {
                         $.get('README', function(readme) {
                             $('#describe').append(readme);
                             $('#readme').hide();
                         });
-                        e.preventDefault();
-                    });
+                    };
+                    $this.setGo.preventEvent('#readme', more);
                 
                     $this.delay(1000).append($this.$opts.msg).fadeIn();
                     $('#describe').delay(2500).fadeIn();
@@ -52,34 +52,41 @@ $(document).ready(function() {
                 }
         };
     // Run App
-    $app.setGo($opt);    
+    $app.setGo($opt);
 });
 </script>
 
 </head>
 <body>
 
-    <div id="wireframe" class="setGo { msg: 'setGo!' }">
+    <div id="wireframe">
         
         <div id="header">
             <div id="masthead">
-                @author: <strong>Sean Girard</strong>
-                <div class="float-right">
+                <div id="contact" class="float-right">
                     (<a rel="external" href="http://twitter.com/seanmgirard">@seanmgirard</a>)
                 </div>
+                <div id="branding">
+                    @author: <strong>Sean Girard</strong>
+                </div>
+            </div>
+            <div id="navigate">
+
             </div>
         </div>
         
-        <div id="container">
+        <div id="wrapper" class="clear">
             
             <div id="col-left" class="float-left">
-                <p>
-                $(document)
-                </p>
+                <div id="menu">
+                    <ul>
+                        <li><a href="./">$(document)</a></li>
+                    </ul>
+                </div>
             </div>
             
             <div id="col-mid" class="float-left">
-                <div id="app" class="xxl">
+                <div id="app" class="xxl setGo { msg: 'setGo!' }">
                     Application
                 </div>
                 <div id="describe" class="hide">
