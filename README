@@ -1,7 +1,8 @@
-<h3>
 A simple plugin pattern for your jQuery application.
-</h3>
 
-<p>
-ToDo: Finish README.
-</p>
+ToDo:
+-Finish README
+
+Known Issues:
+- Unecessary recursion in the object constructor ($obj)?
+- Method calls are wrapped in try/catch; you unwrap them

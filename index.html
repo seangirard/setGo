@@ -30,25 +30,22 @@ $(document).ready(function() {
     var $opt = {
                 // Custom properties
                 msg: "{<br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
-                // Reserved Callbacks
-                __success: function($this) {
+                // Override Callbacks
+                __success: function($this, $opts) {
                     var more = function(e,d,h) {
                         $.get('README', function(readme) {
+                            readme = readme.replace(/\r\n|\r|\n/g, '<br />');
+                            readme = '<hr /><p style="color:#666; font-size:.9em;">'+readme+'</p>';
                             $('#describe').append(readme);
                             $('#readme').hide();
                         });
                     };
                     $this.setGo.preventEvent('#readme', more);
-                
-                    $this.delay(1000).append($this.$opts.msg).fadeIn();
+                    
+                    $this.delay(1000).append($opts.msg).fadeIn();
                     $('#describe').delay(2500).fadeIn();
                     $('#col-right').delay(5000).fadeIn();
                     $('#tagline').delay(7000).fadeIn('slow');
-                    // Console
-                    $this.setGo.traceOptions(); 
-                },
-                __failure: function($this, $err) {
-                    $this.html('Well, this really <em>is</em> embarrassing...');
                 }
         };
     // Run App

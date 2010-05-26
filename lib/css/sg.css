@@ -54,6 +54,8 @@ ul,ol { list-style-position: inside; margin:.5em; }
 ul { list-style-type: square; font-size: .9em; }
 li {  margin-bottom: .25em; }
 
+hr { margin-bottom: .5em; color: #ccc; background-color: #ccc; height: 1px; border: none; }
+
 blockquote { margin: 1em 0; padding: 1em; border-width: 1px 0; }
 
 dl {  }
