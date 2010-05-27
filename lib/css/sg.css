@@ -15,14 +15,17 @@
 #app { padding: .5em 1em; }
 
 #menu, #navigate {  }
+#menu {  }
+#navigate {  }
+
 #menu ul, #navigate ul { margin:0; padding:0; }
-#menu ul li, #navigate ul li { text-align: center; margin:0; padding:0; display:block; list-style-type: none; }
+#menu ul li, #navigate ul li { margin:0; padding:0; display:block; list-style-type: none; }
 
 #menu ul {  }
-#navigate ul { float: left; }
+#navigate ul { }
 
-#menu ul li {  }
-#navigate ul li {  }
+#menu ul li { text-align: right;  }
+#navigate ul li { text-align: center; float: left; }
 
 #wrapper { color: #036; border-top: .25em solid #ccc; width:auto; }
 
