@@ -33,9 +33,11 @@ $(document).ready(function() {
                 // Override Callbacks
                 __success: function($this, $opts) {
                     var more = function(e,d,h) {
-                        $.get('README', function(readme) {
-                            readme = readme.replace(/\r\n|\r|\n/g, '<br />');
-                            readme = '<hr /><p style="color:#666; font-size:.9em;">'+readme+'</p>';
+                        $.get('README', function(txt) {
+                            readme = '<hr />';
+                            readme += '<p style="color:#666; font-size:.9em;">';
+                            readme += $this.setGo.newLine(txt);
+                            readme += '</p>';
                             $('#describe').append(readme);
                             $('#readme').hide();
                         });
