@@ -1,8 +1,25 @@
 A simple plugin pattern for your jQuery application.
 
+Put your app logic in __init().
+Add your own options and methods.
+Success/failure callbacks are provided.
+
+All public methods provided can be changed or removed.
+All private objects/functions (prefixed w/ __) should be kept.
+
+To change your application namespace: 
+- Change value of var __namespace
+- Change public method names
+
+NOTE: 
+- setGo is meant to contain your app logic.
+- You might consider it the "last link" in your chain.
+- This may not turn out to be a very good design and may behave unexpectedly.
+
 ToDo:
--Finish README
+- Documentation
+- Finish README
 
 Known Issues:
 - Unecessary recursion in the object constructor ($obj)?
-- Method calls are wrapped in try/catch; you unwrap them
+- Method calls are wrapped in try/catch; you can unwrap them

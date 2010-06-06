@@ -1,3 +1,4 @@
+
 /* 
 // Application Objects
 */
@@ -32,7 +33,7 @@
 #col-left, #col-right, #col-mid { height:400px; margin: 0; padding: .5em; }
 #col-left, #col-right { border-bottom: 2px dotted #999; }
 
-#col-mid { width: 400px; }
+#col-mid { width: 500px; }
 #col-left { width: 100px; border-right: 2px solid #999; background: #ccc url('../../lib/img/shim/1x1-black.png') repeat-y 99% 50%; }
 #col-right { width: 200px; }
 

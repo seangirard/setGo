@@ -29,13 +29,13 @@ $(document).ready(function() {
     var $app = $('#app');
     var $opt = {
                 // Custom properties
-                msg: "{<br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> });",
+                msg: "{<br /> &nbsp;&nbsp;&nbsp;&nbsp; $('#app').<strong>setGo</strong>(); <br /> } );",
                 // Override Callbacks
                 __success: function($this, $opts) {
                     var more = function(e,d,h) {
                         $.get('README', function(txt) {
                             readme = '<hr />';
-                            readme += '<p style="color:#666; font-size:.9em;">';
+                            readme += '<p style="color:#666; font-size:.9em; height:180px; overflow-y:scroll;">';
                             readme += $this.setGo.newLine(txt);
                             readme += '</p>';
                             $('#describe').append(readme);
@@ -86,7 +86,7 @@ $(document).ready(function() {
             
             <div id="col-mid" class="float-left">
                 <div id="app" class="xxl setGo { msg: 'setGo!' }">
-                    Application
+                    .ready(
                 </div>
                 <div id="describe" class="hide">
                     <p>
