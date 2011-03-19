@@ -15,6 +15,7 @@ NOTE:
 - setGo is meant to contain your app logic.
 - You might consider it the "last link" in your chain.
 - This may not turn out to be a very good design and may behave unexpectedly.
+- In retrospect, preventEvent is probably not a very good idea. Leaving it in for now though.
 
 ToDo:
 - Documentation
