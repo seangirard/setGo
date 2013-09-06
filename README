@@ -30,3 +30,4 @@ ToDo:
 Known Issues:
 - Unecessary recursion in the object constructor ($obj)?
 - Method calls are wrapped in try/catch; you can unwrap them
+
